@@ -1,0 +1,1 @@
+export const DEFAULT_MESSAGE = 'Please, select game difficulty, enter your name and press "Play" to start the game';

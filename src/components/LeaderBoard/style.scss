@@ -1,0 +1,28 @@
+.leader_board {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.leaders_list {
+	margin-top: 30px;
+	list-style: none;
+	li {
+		padding: 15px 10px;
+		display: flex;
+		justify-content: space-between;
+		background-color: #CFD8DC;
+		color: #A0A9AC;
+		& + li {
+			margin-top: 3px;
+		}
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.leader_board {
+		width: 100%;
+	}
+	.leaders_list {
+		font-size: 12px;
+	}
+}
