@@ -8,6 +8,7 @@ import Item from './Item';
 import './style.scss';
 
 const windowWidth = window.innerWidth;
+const filedWidth = windowWidth >= 768 ? 35 : 20;
 
 const GameArea = () => {
 	const { setItemColor } = useStoreActions(actions => actions.game);
@@ -31,12 +32,12 @@ const GameArea = () => {
 					return (
 						<div key={fieldNumber}
 						     className="column"
-						     style={{ width: (windowWidth / 35) * gameMode.field }}
+						     style={{ width: filedWidth * gameMode.field }}
 						>
 							{
 								fieldItems.map(item =>
 									<Item
-										key={item.id} size={windowWidth / 35}
+										key={item.id} size={filedWidth}
 										{...item}
 										onClick={handleClick}
 									/>
